@@ -1,9 +1,9 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import Home from './home/home';
+import React from "react";
 
-export default () => (
+const App = () => (
   <div>
-    <Route exact path="/" component={Home} />
+    <h1>WELCOME TO THIS APP</h1>
   </div>
 );
+
+export default App;
