@@ -1,8 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import GreetingContainer from "./Greeting/greeting_container";
 
 const App = () => (
   <div>
-    <h1>WELCOME TO THIS APP</h1>
+     <header>
+      <Link to="/" className="header-link">
+        <h1>Rails App</h1>
+      </Link>
+      <GreetingContainer />
+    </header>
   </div>
 );
 

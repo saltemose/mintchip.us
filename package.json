@@ -22,6 +22,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "nodemon": "^2.0.3",
     "webpack-dev-server": "^3.10.3"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
