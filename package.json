@@ -27,7 +27,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
-  "main": "babel.config.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "test"
