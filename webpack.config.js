@@ -1,5 +1,5 @@
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 
 module.exports = {
@@ -23,7 +23,14 @@ module.exports = {
             presets: ["@babel/preset-env", "@babel/preset-react"]
           }
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        use: [
+            { loader: "style-loader" },
+            { loader: "css-loader" }
+        ]
+    }
     ]
   },
   devtool: "source-map"
