@@ -1,4 +1,6 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -36,23 +38,27 @@ class SessionForm extends React.Component {
 
   render() {
     return (
+      <div className="log-in">
+        <div className="left-side-login"></div>
       <div className="login-form-container">
+
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to Mint Chip!
+        <div className="login-box-title">Welcome to Mint Chip</div>
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
           <div className="login-form">
-            <br/>
-            <label>Username:
+            <label><div className="login-box-text">Email or username</div>
+                <br/>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="login-input"
               />
+              <br/>
             </label>
             <br/>
-            <label>Password:
+            <label><div className="login-box-text">Password</div>
+                <br/>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
@@ -60,9 +66,13 @@ class SessionForm extends React.Component {
               />
             </label>
             <br/>
+            <br/>
+            <div className="forgot-link"><Link to="/">Forgot your username or password?</Link></div>
+            <div className="login-form-spacer"></div>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
+      </div>
       </div>
     );
   }
