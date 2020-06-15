@@ -1,0 +1,2 @@
+module Api::StocksOwnedHelper
+end

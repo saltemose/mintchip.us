@@ -4,10 +4,23 @@
     <title>RailsApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <script type="text/javascript">
+    <script type="text/javascript">
     window.LoginImage = "<%= image_url('login.png') %>";
+    window.RHLogo = "<%= image_url('logo.jpg') %>";
+    window.WelcomeImage = "<%= image_url('welcomeImage.png')%>"
+    window.WelcomeVideo = "<%= image_url('welcomeVideo.mp4')%>"
+    window.rbImage1 = "<%= image_url('rbImage1.png')%>"
+    window.rbVectorImage = "<%= image_url('robinhood-vector-logo.png')%>"
+        window.logoutImage = "<%= image_url('logout.png')%>"
+    </script>
+
+    <script src="https://kit.fontawesome.com/75994e3abb.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+    window.newsKey = "<%=ENV['news_api_key']%>"
+    window.iexKey = "<%=ENV['iex_api_key']%>"
     </script>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     

@@ -5,15 +5,95 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require_relative 'portfolio_snapshots'
 
 User.delete_all
+Stock.delete_all
+Deposit.delete_all
+Transaction.delete_all
 
 u1 = User.create!(
   username: 'guest',
   password: 'password'
 )
 
+Deposit.create({user_id: u1.id, amount: 50000})
+
 u2 = User.create!(
   username: 'username',
   password: 'password'
 )
+
+nasdaq_stock_data = File.read(Rails.root.join('db/nasdaq.csv'))
+
+nasdaq_stocks_array = nasdaq_stock_data.split(/^/) 
+stock_object = {}
+nasdaq_stocks = []
+nasdaq_stocks_array.each do |stock|
+   stock_object = {
+        ticker: stock.split(",")[0],
+        name: stock.split(",")[1].chomp.delete('\\"')
+    } 
+nasdaq_stocks.push(stock_object)
+stock_object = {}
+   nasdaq_stocks
+end
+
+nyse_data = File.read(Rails.root.join('db/nyse.csv'))
+
+nyse_stocks_array = nyse_data.split(/^/)
+stock_object = {}
+nyse_stocks = []
+nyse_stocks_array.each do |stock|
+    stock_object = {
+        ticker: stock.split(",")[0],
+        name: stock.split(",")[1].chomp.delete('\"')
+    }
+nyse_stocks.push(stock_object)
+stock_object = {}
+    nyse_stocks
+end
+
+all_stocks = nasdaq_stocks + nyse_stocks
+Stock.create(all_stocks)
+
+
+  # Find stocks for portfolio
+  aapl = Stock.find_by(ticker: :AAPL)
+  amzn = Stock.find_by(ticker: :AMZN)
+  fb = Stock.find_by(ticker: :FB)
+  nflx = Stock.find_by(ticker: :NFLX)
+  twtr = Stock.find_by(ticker: :TWTR)
+  msft = Stock.find_by(ticker: :MSFT)
+  sbux = Stock.find_by(ticker: :SBUX)
+  amd = Stock.find_by(ticker: :AMD)
+  blue = Stock.find_by(ticker: :BLUE)
+  gild = Stock.find_by(ticker: :GILD)
+  nktr = Stock.find_by(ticker: :NKTR)
+  lulu = Stock.find_by(ticker: :LULU)
+  stz = Stock.find_by(ticker: :STZ)
+
+  # Generate transactions based on actual close prices for each stock at given date
+  Time.zone = 'Eastern Time (US & Canada)'
+
+Transaction.create([
+  {user_id: u1.id, stock_id: aapl.id, price: 68.45, num_shares: 50, order_type: 'buy', transaction_date: Time.zone.local(2014, 4, 16, 16, 0, 0)},
+  {user_id: u1.id, stock_id: amzn.id, price: 305.84, num_shares: 20, order_type: 'buy', transaction_date: Time.zone.local(2014, 12, 10, 16, 0, 0)},
+  {user_id: u1.id, stock_id: fb.id, price: 92.31, num_shares: 40, order_type: 'buy', transaction_date: Time.zone.local(2015, 9, 14, 16, 0, 0)},
+  {user_id: u1.id, stock_id: nflx.id, price: 57.99, num_shares: 50, order_type: 'buy', transaction_date: Time.zone.local(2014, 2, 4, 16, 0, 0)},
+  {user_id: u1.id, stock_id: twtr.id, price: 54.50, num_shares: 50, order_type: 'buy', transaction_date: Time.zone.local(2014, 3, 12, 16, 0, 0)},
+  {user_id: u1.id, stock_id: msft.id, price: 37.91, num_shares: 50, order_type: 'buy', transaction_date: Time.zone.local(2014, 7, 14, 16, 0, 0)},
+  {user_id: u1.id, stock_id: sbux.id, price: 37.54, num_shares: 50, order_type: 'buy', transaction_date: Time.zone.local(2014, 12, 17, 16, 0, 0)},
+  {user_id: u1.id, stock_id: amd.id, price: 2.32, num_shares: 1000, order_type: 'buy', transaction_date: Time.zone.local(2015, 5, 20, 16, 0, 0)},
+  {user_id: u1.id, stock_id: blue.id, price: 90.34, num_shares: 30, order_type: 'buy', transaction_date: Time.zone.local(2015, 2, 17, 16, 0, 0)},
+  {user_id: u1.id, stock_id: gild.id, price: 104.48, num_shares: 50, order_type: 'buy', transaction_date: Time.zone.local(2015, 8, 7, 16, 0, 0)},
+  {user_id: u1.id, stock_id: nktr.id, price: 15.27, num_shares: 100, order_type: 'buy', transaction_date: Time.zone.local(2016, 4, 13, 16, 0, 0)},
+  {user_id: u1.id, stock_id: lulu.id, price: 51.91, num_shares: 50, order_type: 'buy', transaction_date: Time.zone.local(2015, 10, 12, 16, 0, 0)},
+  {user_id: u1.id, stock_id: stz.id, price: 152.50, num_shares: 20, order_type: 'buy', transaction_date: Time.zone.local(2017, 2, 9, 16, 0, 0)}
+])
+
+SNAPSHOTS.each do |snapshot|
+  date = Date.parse(snapshot[:time])
+  balance = snapshot[:balance]
+  PortfolioSnapshot.create({ date: date, balance: balance, user_id: u1.id })
+end

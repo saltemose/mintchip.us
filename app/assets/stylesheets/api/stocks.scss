@@ -1,0 +1,275 @@
+// Place all the styles related to the api/stocks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import "base/colors.scss";
+
+*a:hover {
+    cursor: pointer;
+}
+.stock-card-overall {
+    margin: 0 auto;
+}
+
+.stock-card {
+
+    margin: 0 auto;
+}
+
+a.show-more {
+    position: absolute;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 550;
+    right: 0px;
+    color: rgba(0,200,5,1);
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+a.show-more:hover {
+    color: $green-hover;
+    cursor: pointer;
+}
+
+a.show-more-neg {
+    position: absolute;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 550;
+    right: 0px;
+    color: $red;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+a.show-more-neg:hover {
+    position: absolute;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 550;
+    right: 0px;
+    color: $red-hover;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+a.show-less {
+    color: transparent;
+    display: none;
+}
+
+a.show-less-neg {
+    color: transparent;
+    display: none;
+}
+
+a.collection {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 9pt;
+    background-color: rgba(0,200,5,0.1);
+    color:  rgba(0,200,5,1);
+    font-weight: 600;
+    padding: 6px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50px;
+    opacity: 1;
+}
+
+a.collection-neg {
+   
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 9pt;
+        background-color: rgba(255,80,0,0.2);
+        color:  $red;
+        font-weight: 600;
+        padding: 6px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50px;
+        opacity: 1;
+    
+}
+
+.stock-sidebar-text-2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 500;
+    padding-top: 15px;
+    color: rgba(0,200,5,1);
+}
+
+.stock-sidebar-text-2-neg {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 500;
+    padding-top: 15px;
+    color: $red;
+}
+
+.stock-sidebar-btn-neg {
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 55px;
+    background-color: $red;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 500;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+.stock-sidebar-btn:hover {
+    cursor: pointer;
+}
+
+.stock-sidebar-btn-neg:hover {
+    cursor: pointer;
+}
+
+.stock-sidebar-btn-neg-b {
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 55px;
+    vertical-align: middle;
+    background-color: $red;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 500;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+.stock-sidebar-btn-c {
+    margin-top: 7px;
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 55px;
+    vertical-align: middle;
+    background-color: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 500;
+    color: $green;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid $green;
+}
+
+.stock-sidebar-btn-neg-c {
+    margin-top: 7px;
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 55px;
+    vertical-align: middle;
+    background-color: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 500;
+    color: $red;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid $red;
+}
+
+a.nav-link-neg {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 620;
+    color: black;
+    padding-right: 40px;
+    display: inline-flex;
+    text-decoration: none;
+    vertical-align: middle;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+
+a.nav-link-neg:hover {
+    color: $red;
+    cursor: pointer;
+}
+
+a.nav-link-selected-neg {
+    color: $red;
+    padding-bottom: 8px;
+    border-bottom: $red 2px solid;
+    
+}
+a.nav-link-selected:hover {
+    cursor: pointer;
+}
+
+.search-res {
+    display: none;
+}
+
+.search-bar:focus-within + .search-res, .search-res:focus-within, .search-res:focus, .search-res:active {
+    max-height: 12em;
+    display: block;
+}
+
+a.buy-btn {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12pt;
+    font-weight: 450;
+    padding: 35px;
+    padding-right: 10px;
+    padding-left: 0px;
+    color: $green;
+}
+
+a.buy-btn-b {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12pt;
+    font-weight: 450;
+    padding: 35px;
+    padding-right: 10px;
+    padding-left: 0px;
+}
+
+a.sell-btn {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12pt;
+    font-weight: 450;
+    padding: 35px;
+    padding-right: 10px;
+    padding-left: 0px;
+    color: $red;
+}
+
+.review-hidden {
+    display: none;
+}
+
+.review-dropped {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 500;
+    padding-bottom: 20px;
+    line-height: 1.4em;
+    text-align: left;
+}
+
+.review {
+    padding-top: 21px;
+}
+
+.review:hover {
+    cursor: pointer;
+}

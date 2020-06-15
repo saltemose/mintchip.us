@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_14_230256) do
+ActiveRecord::Schema.define(version: 2020_04_21_012504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,32 @@ ActiveRecord::Schema.define(version: 2020_04_14_230256) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "deposits", force: :cascade do |t|
+    t.integer "user_id"
+    t.float "amount"
+  end
+
+  create_table "portfolio_snapshots", force: :cascade do |t|
+    t.integer "user_id"
+    t.date "date"
+    t.float "balance"
+  end
+
+  create_table "stocks", force: :cascade do |t|
+    t.string "name"
+    t.string "ticker"
+    t.index ["ticker"], name: "index_stocks_on_ticker", unique: true
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "stock_id"
+    t.float "price"
+    t.integer "num_shares"
+    t.string "order_type"
+    t.datetime "transaction_date"
   end
 
   create_table "users", force: :cascade do |t|

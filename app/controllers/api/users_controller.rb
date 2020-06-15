@@ -12,6 +12,14 @@ class Api::UsersController < ApplicationController
 
     end
 
+    def info
+        @user = User.find(params[:id])
+    end
+
+    def portfolio
+        @user = User.find(params[:id])
+      end
+
     private
 
     def user_params

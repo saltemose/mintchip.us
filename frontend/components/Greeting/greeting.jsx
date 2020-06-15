@@ -1,23 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import WelcomePage from '../welcome/welcome_page';
+import Portfolio from '../dashboard/portfolio';
 
 
 
 const Greeting = ({ currentUser, logout }) => {
-  const sessionLinks = () => (
-    <nav className="login-signup">
-      <Link to="/login">Login</Link>
-      &nbsp;or&nbsp;
-      <Link to="/signup">Sign up</Link>
-    </nav>
+  const welcome = () => (
+    <WelcomePage/>
   );
-  const personalGreeting = () => (
+  const dashboard = () => (
     <hgroup className="header-group">
-      <button className="header-button" onClick={logout}>Log Out</button>
     </hgroup>
+  
+
   );
 
-  return currentUser ? personalGreeting() : sessionLinks();
+  return currentUser ? dashboard() : welcome();
 };
 
 
