@@ -207,12 +207,12 @@ class PortfolioChart extends React.Component {
                                                 </div>
                                                 </div>
                                         </div>
-                                        <div className="acct-drpdwn-item">
+                                        <div onClick={this.props.logout} className="acct-drpdwn-item">
                                         <div className="acct-drpdwn-item-img">
                                         <img className="logout-image" src={window.logoutImage} alt=""/>
                                         </div>
                                         <div className="acct-drpdwn-item-word">
-                                        <a className="account-dropdown-link" onClick={this.props.logout}>Log Out</a>
+                                        <a className="account-dropdown-link">Log Out</a>
                                         </div>
                                     </div>
                                         </div>
