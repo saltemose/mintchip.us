@@ -11,6 +11,7 @@ User.delete_all
 Stock.delete_all
 Deposit.delete_all
 Transaction.delete_all
+News.delete_all
 
 u1 = User.create!(
   username: 'guest',
@@ -97,3 +98,42 @@ SNAPSHOTS.each do |snapshot|
   balance = snapshot[:balance]
   PortfolioSnapshot.create({ date: date, balance: balance, user_id: u1.id })
 end
+
+News.create([
+  {source: "The Economist",
+  title: "Can Hong Kong remain a global financial centre?",
+    content: "The best way to get your head around the role that Hong Kong plays in the global financial system, says a business figure there, is to think of it as an electrical transformer that connects two circuits with different voltages. One is the global financial system with its freewheeling capital flows, open dissemination of information and the rule of law. The other circuit is China’s vast and growing financial system with its controls on capital, censorship and capricious enforcement of contracts.",
+    url: "https://www.economist.com/finance-and-economics/2020/06/06/can-hong-kong-remain-a-global-financial-centre",
+    urlToImage: "https://www.economist.com/img/b/1280/720/90/sites/default/files/20200606_FNP002_0.jpg"
+  },
+  {
+source: "TechCrunch",
+title: "Salesforce Commerce Cloud releases four quick-start pandemic business packs",
+url: "http://techcrunch.com/2020/05/21/salesforce-commerce-cloud-releases-four-quick-start-pandemic-business-packs/",
+urlToImage: "https://techcrunch.com/wp-content/uploads/2020/05/Screenshot-2020-05-21-07.57.44.jpg?w=428",
+content: "As we move deeper into the pandemic, it’s clear that the way we conduct business is changing, maybe forever. That means that business has to change too — and fast. But if you’ve never conducted busin… [+3366 chars]"},
+{
+  source: "CNN",
+  title: "Flour business saved by amateur bakers",
+  url: "https://www.cnn.com/videos/travel/2020/06/02/ny-flour-business-saved-during-covid.cnn",
+  urlToImage: "https://cdn.cnn.com/cnnnext/dam/assets/200602102736-ny-flour-business-1-super-tease.jpg",
+  content: "Chat with us in Facebook Messenger. Find out what's happening in the world as it unfolds."},
+  {
+    source: "TechCrunch",
+    title: "Facebook and Instagram rolls out Shops, turning business profiles into storefronts",
+    url: "http://techcrunch.com/2020/05/19/facebook-shops/",
+    urlToImage: "https://techcrunch.com/wp-content/uploads/2020/05/Facebook-Shops_color.jpeg?w=711",
+    content: "Starting today, you’ll be able to browse and buy products directly from a business’ Facebook Page or Instagram profile. Both Facebook and Instagram already supported a degree of ecommerce for exampl… [+2973 chars]"},
+    {
+      source: "Gizmodo.com",
+      title: "General Electric Finally Manages to Jettison Its Historic Lighting Business",
+      url: "https://gizmodo.com/general-electric-finally-manages-to-jettison-its-histor-1843715650",
+      urlToImage: "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/lx0hflcbfrzaygwfpryk.jpg",
+      content: "General Electric is no longer in the light bulb business, the company announced on Wednesday. GE said that its 129-year-old lighting unitwhich was formed in 1892 from the merger of Thomas Edisons Ed… [+2330 chars]"},
+      {
+        source: "TechCrunch",
+        title: "Salesforce Commerce Cloud releases four quick-start pandemic business packs",
+        url: "http://techcrunch.com/2020/05/21/salesforce-commerce-cloud-releases-four-quick-start-pandemic-business-packs/",
+        urlToImage: "https://techcrunch.com/wp-content/uploads/2020/05/Screenshot-2020-05-21-07.57.44.jpg?w=428",
+        content: "As we move deeper into the pandemic, it’s clear that the way we conduct business is changing, maybe forever. That means that business has to change too — and fast. But if you’ve never conducted busin… [+3366 chars]"},
+])

@@ -283,23 +283,19 @@ render() {
                 }
             </div>
             <br/>
+            {
+                Object.keys(stock).map((key, i) => {
+                    if (key === "quote") 
+                    return (
             <div className="popular-collections-container-stock-card">
                 <div className="pop-coll-title">Collections</div>
                 <br/>
-                
+                {stock["company"].tags.map((each) => {
+                    return (
                 <div className="collection-btn-container">
-                <a className={change > 0 ? "collection"  : "collection-neg"} href="">100 Most Popular</a>
-                </div>
-                <div className="collection-btn-container">
-                <a className={change > 0 ? "collection"  : "collection-neg"} href="">Technology</a>
-                </div>
-                <div className="collection-btn-container">
-                <a className={change > 0 ? "collection"  : "collection-neg"} href="">Software Service</a>
-                </div>
-                <div className="collection-btn-container">
-                <a className={change > 0 ? "collection"  : "collection-neg"} href="">Consumer Products</a>
-                </div>
-            </div>
+                <a className={change > 0 ? "collection"  : "collection-neg"} href="">{each}</a>
+                </div>)})}
+            </div>)})}
             <br/>
 
             <div className="stock-news-container-main-2">
