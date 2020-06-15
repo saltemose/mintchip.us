@@ -52,6 +52,7 @@ class StockChart extends React.Component {
 
     renderChart(range) {
         this.setState({active: range});
+   
 
 
     }

@@ -32,7 +32,7 @@ class SearchBar extends React.Component {
         let stocks;
         let array;
 
-        if (allStocks && this.state.inputVal.length > 1) {
+        if (allStocks && this.state.inputVal.length > 0) {
         stocks = allStocks.filter((stock) => {
             return array = (stock.ticker.toLowerCase().includes(this.state.inputVal.toLowerCase()) || stock.name.toLowerCase().includes(this.state.inputVal.toLowerCase()));
         });
