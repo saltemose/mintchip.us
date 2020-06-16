@@ -576,7 +576,7 @@ a.footer-link {
 .login-form-box {
     position: relative;
     padding: 52px;
-    top: 180px;
+    top: 140px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 9pt;
     font-weight: 550;
@@ -647,6 +647,24 @@ a.footer-link {
     font-size: 10pt;
     font-weight: 400;
 }
+
+.session-submit-2 {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: white;
+    width: 140px;
+    height: 48px;
+    color: rgba(0,200,5,1);
+    border-radius: 7px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 400;
+    border: 1px solid rgba(0,200,5,1);;
+ }
+
+ .session-submit-2:hover {
+     cursor: pointer;
+ }
 
 .session-submit:hover {
     cursor: pointer;
@@ -2108,7 +2126,8 @@ a.welcome-login-btn-3 {
     vertical-align: middle;
        align-items: center;
        background-color: white;
-       flex-basis: none;
+       flex-basis: unset;
+       margin: 0 auto;
        width: 100%;
        height: 100%;
    }
@@ -2121,28 +2140,6 @@ a.welcome-login-btn-3 {
    display: none;
 }
 
-.login-form-box {
-   position: relative;
-   top: 60px;
-   padding: 20px;
-   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   font-size: 9pt;
-   font-weight: 550;
-   text-align: left;
-}
-
-.login-input {
-   width: 80%;
-   padding-left: 20px;
-   height: 45px;
-   background-color: #fafafa;
-   border: none;
-   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   font-size: 9pt;
-   border-radius: 7px;
-   text-decoration: none;
-   border: 1px solid white;
-}
 
 .login-input:hover {
    border: 1px solid #e3e3e3;
@@ -2183,6 +2180,7 @@ a.welcome-login-btn-3 {
 }
 
 .session-submit {
+   display: inline-block;
    background-color: rgba(0,200,5,1);
    width: 140px;
    height: 48px;
@@ -2192,6 +2190,20 @@ a.welcome-login-btn-3 {
    font-size: 10pt;
    font-weight: 400;
 }
+
+.session-submit-2 {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: white;
+    width: 140px;
+    height: 48px;
+    color: rgba(0,200,5,1);
+    border-radius: 7px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: 400;
+    border: 1px solid rgba(0,200,5,1);;
+ }
 
 .complete-entry {
 }
@@ -2261,29 +2273,26 @@ a.welcome-login-btn-3 {
 .login-form-container {
         align-items: center;
         background-color: white;
-        flex-basis: 50%;
+        flex-basis: none;
+        width: 80%;
         height: 100%;
     }
 
-.left-side-login {
-    background-image: url('https://cdn.robinhood.com/assets/mobius_generated_assets/ae374957a035eb8a2bd1717cb67abb51.jpg');
-    background-position: center;
-    background-size: cover;
-    flex-basis: 50%;
-}
+
 
 .login-form-box {
-    position: relative;
-    padding: 52px;
-    top: 180px;
+    padding: 0px;
+    padding-left: 0px;
+    top: 140px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 9pt;
     font-weight: 550;
     text-align: left;
+    width: 100%;
 }
 
 .login-input {
-    width: 390px;
+    width: 100%;
     padding-left: 20px;
     height: 45px;
     background-color: #fafafa;
@@ -2333,18 +2342,6 @@ a.welcome-login-btn-3 {
     line-height: 2.5em;
 }
 
-.session-submit {
-    background-color: rgba(0,200,5,1);
-    width: 140px;
-    height: 48px;
-    color: white;
-    border-radius: 7px;
-    border-color: rgba(195,245,60,1);
-    border: none;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 10pt;
-    font-weight: 400;
-}
 
 
 
