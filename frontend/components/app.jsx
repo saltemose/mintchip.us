@@ -17,10 +17,8 @@ import cash_container from "./cash_container";
 
 const App = () => (
   <div>
-    <header>
     <GreetingContainer/>
-    </header>
- <Switch>
+    <Switch>
     <AuthRoute path="/login" component={LoginFormContainer} />
     <AuthRoute path="/signup" component={SignupFormContainer} />
     <ProtectedRoute path="/stocks/:ticker" component={StockCard}/>

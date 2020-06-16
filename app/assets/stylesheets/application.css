@@ -19,6 +19,11 @@
      to {opacity: 1;}
  }
 
+body {
+     margin: 0;
+     right: 0;
+     width: 100%;
+ }
 
 
  .stock-loading {
@@ -41,6 +46,7 @@
     text-align: center;
     vertical-align: middle;
     width: 100%;
+    margin: 0 0;
     left: 0;
 }
 
@@ -176,7 +182,7 @@ a.welcome-login-btn-2 {
 
 .welcome-image-container { 
     display: inline-block;
-    
+    overflow: hidden;
 }
 
 .welcome-image {
@@ -1772,10 +1778,10 @@ a.rb-logo {
 
 .welcome-btns {
     display: inline-block;
-    position: relative;
+    position: absolute;
     max-width: 60%;
     text-align: right;
-    right: 0;
+    right: 10px;
     vertical-align: middle;
     margin-left: 160px;
     top: 15px;
@@ -1803,7 +1809,7 @@ a.welcome-login-btn-2 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 11pt;
     font-weight: 550;
-    height: 15px;
+    height: 16px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 50px;
@@ -1846,6 +1852,7 @@ a.welcome-login-btn-2 {
     min-height: auto;
     z-index: 1;
     width: 100%;
+    overflow: hidden;
 }
 
     .welcome-image-container-main {
@@ -1855,8 +1862,9 @@ a.welcome-login-btn-2 {
         text-align: left;
         vertical-align: middle;
         width: 100%;
-        padding-right: 0;
+        overflow: hidden;
     }
+
     
     .welcome-sp-container-b {
         padding: 20px;
@@ -1872,14 +1880,14 @@ a.welcome-login-btn-2 {
     .welcome-image {
         vertical-align: middle;
         padding-top: 0px;
-        width: 100%;
+        width: 380px;
     }
     
     .screen {
         position: absolute;
         vertical-align: middle;
         padding-top: 0px;
-        width: 100%;
+        width: 380px;
     }
 
     .welcome-sp-container-3 {
@@ -1919,6 +1927,7 @@ a.welcome-login-btn-2 {
         overflow-x: scroll;
         white-space: nowrap;
         font-size: 10pt;
+        width: 100%;
     }
 
 
@@ -2001,6 +2010,7 @@ a.welcome-login-btn-2 {
 }
 
 .container-5-disclosures {
+    display: block;
     text-align: left;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 10pt;
@@ -2175,6 +2185,14 @@ a.welcome-login-btn-3 {
    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    font-size: 10pt;
    font-weight: 400;
+}
+
+.complete-entry {
+}
+
+.welcome-full {
+    display: block;
+    margin-left: 0;
 }
 
 
