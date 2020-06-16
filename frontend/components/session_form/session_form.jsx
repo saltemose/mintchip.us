@@ -70,7 +70,7 @@ class SessionForm extends React.Component {
             <div className="login-form-spacer"></div>
             <br/>
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <button className="session-submit" type="submit">Sign In</button>
           </div>
         </form>
       </div>
