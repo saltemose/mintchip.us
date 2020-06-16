@@ -635,6 +635,7 @@ a.footer-link {
 }
 
 .session-submit {
+    display: inline-block;
     background-color: rgba(0,200,5,1);
     width: 140px;
     height: 48px;
