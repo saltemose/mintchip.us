@@ -647,6 +647,10 @@ a.footer-link {
     font-weight: 400;
 }
 
+.session-submit:hover {
+    cursor: pointer;
+}
+
 .charttt {
     height: 60px;
     background-color: black;

@@ -130,10 +130,5 @@ content: "As we move deeper into the pandemic, it’s clear that the way we cond
       url: "https://gizmodo.com/general-electric-finally-manages-to-jettison-its-histor-1843715650",
       urlToImage: "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/lx0hflcbfrzaygwfpryk.jpg",
       content: "General Electric is no longer in the light bulb business, the company announced on Wednesday. GE said that its 129-year-old lighting unitwhich was formed in 1892 from the merger of Thomas Edisons Ed… [+2330 chars]"},
-      {
-        source: "TechCrunch",
-        title: "Salesforce Commerce Cloud releases four quick-start pandemic business packs",
-        url: "http://techcrunch.com/2020/05/21/salesforce-commerce-cloud-releases-four-quick-start-pandemic-business-packs/",
-        urlToImage: "https://techcrunch.com/wp-content/uploads/2020/05/Screenshot-2020-05-21-07.57.44.jpg?w=428",
-        content: "As we move deeper into the pandemic, it’s clear that the way we conduct business is changing, maybe forever. That means that business has to change too — and fast. But if you’ve never conducted busin… [+3366 chars]"},
+
 ])

@@ -70,7 +70,8 @@ class SessionForm extends React.Component {
             <div className="login-form-spacer"></div>
             <br/>
             <br/>
-            <button className="session-submit" type="submit">Sign In</button>
+            <button className="session-submit" type="submit">Sign In</button> &nbsp;
+            <button className="session-submit" onClick={() => this.setState({username: 'guest', password: 'password'})} type="submit">Demo Login</button>
           </div>
         </form>
       </div>
