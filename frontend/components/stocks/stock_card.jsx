@@ -378,7 +378,7 @@ render() {
                     {Object.keys(stock).map((key, i) => {
                         if (key === "quote")
                         return (
-                            <div className="stock-sidebar-text">{(this.state.inputVal*
+                            <div className="stock-sidebar-text">${(this.state.inputVal*
                         stock["quote"].latestPrice).toFixed(2)}</div>)}
                         )}
                     

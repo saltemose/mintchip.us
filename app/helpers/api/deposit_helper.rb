@@ -1,0 +1,2 @@
+module Api::DepositHelper
+end

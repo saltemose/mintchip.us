@@ -6,15 +6,55 @@ import { FadeLoader } from 'react-spinners';
 class Cash extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {change: 1}
+        this.state = {change: 1, accountDropdown: 'false', submitted: 'false', 
+        amount: '',
+        input: '',
+        user_id: '',
+        review: 'no'}
+
+        this.renderAccountDropdown = this.renderAccountDropdown.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     componentDidMount() {
        this.props.fetchUserInfo(this.props.currentUser)
     }
 
+    handleInput(e) {
+    
+        const amount = e.target.value;
+        const input = e.target.value;
+        this.state.input.includes('$') ? 
+        this.setState({input: input}) : this.setState({input: '$' + input})
+        this.state.input.includes('$') ?
+        this.setState({amount: parseFloat(amount.slice(1))}) : this.setState({amount: parseFloat(amount)})
+        this.setState({user_id: this.props.currentUser.id})
+    }
+
+    handleSubmit(e) {
+      
+        e.preventDefault();
+        this.setState({ submitted: true });
+    
+        let { amount, user_id } = this.state;
+        
+        let deposit = {
+          user_id,
+          amount: parseFloat(amount),
+        };
+    
+        this.props.createDeposit(deposit)
+      }
+
+    renderAccountDropdown() {
+        if (this.state.accountDropdown === 'false') {
+        this.setState({ accountDropdown: 'true'})}
+        else this.setState({ accountDropdown: 'false'})
+    }
+
     render() {
         let change = this.state.change
+
         const display = this.props.currentUser.hasOwnProperty('balance_data') ? 
         (     
             <div className="cash-page">
@@ -52,12 +92,12 @@ class Cash extends React.Component {
                                                 </div>
                                                 </div>
                                         </div>
-                                        <div className="acct-drpdwn-item">
+                                        <div onClick={this.props.logout}className="acct-drpdwn-item">
                                         <div className="acct-drpdwn-item-img">
                                         <img className="logout-image" src={window.logoutImage} alt=""/>
                                         </div>
                                         <div className="acct-drpdwn-item-word">
-                                        <a className="account-dropdown-link" onClick={this.props.logout}>Log Out</a>
+                                        <a className="account-dropdown-link">Log Out</a>
                                         </div>
                                     </div>
                                         </div>
@@ -72,7 +112,7 @@ class Cash extends React.Component {
 
                     
         
-
+            <div className="cash-page-main">
             <div className="cash-page-left">
             <h1 className="cash-page-title">Cash + Margin</h1>
             <div className="balance-2">${this.props.buyingPower}</div>
@@ -108,10 +148,45 @@ class Cash extends React.Component {
             </div>
 
 
-            <div className="cash-page-sidebar">
+            <div className="stock-card-sidebar">
+            <form onSubmit={this.handleSubmit}>
+                <div className="stock-sidebar-container-title">
+                <a> &nbsp;&nbsp;Deposit</a>
+                <a className="three-dots"></a>
+                </div>
+            
+                <div className="stock-card-sidebar-content">
+                    <div className="sidebar-text">
+                    <div className="stock-sidebar-text">Amount</div>
+                    </div>
+                    <div className="sidebar-input-a">
+                    <input value={this.state.input} className={change > 0 ? "shares-input" : "shares-input-neg"} type="float" placeholder="$0.00" onChange={this.handleInput.bind(this)}/>
+                    </div>
+                    <br/>
+                    <div className="sidebar-text">
+    
+                    <br/>
+                </div>
+                <div className={this.state.review === 'yes' ? "review-dropped" : "review-hidden"}>
+                The funds will be deducted from your bank account within the next several days.
 
+                </div>
+                <div>
+                <div  onClick={() => this.setState({review: 'yes'})} className={(change > 0 && this.state.review === 'no') ? "stock-sidebar-btn-b" : (change < 0 && this.state.review) === 'no' ? "stock-sidebar-btn-neg-b" : "review-hidden"}> <div className="review">Review Deposit</div></div>
+                <button className={(change > 0 && this.state.review === 'yes') ? "stock-sidebar-btn" : (change < 0 && this.state.review) === 'yes' ? "stock-sidebar-btn-neg" : "review-hidden"}>Submit</button>
+                <div onClick={() => this.setState({review: 'no'})} className={(change > 0 && this.state.review === 'yes') ? "stock-sidebar-btn-c" : (change < 0 && this.state.review) === 'yes' ? "stock-sidebar-btn-neg-c" : "review-hidden"}>
+                    <div className="review">
+                        Edit
+                    </div>
+                </div>
+                </div>
+                
+           
+                </div>
+               
+            </form>
             </div>
-
+            </div>
             </div>
             ) : (<div className='stock-loading'>
      

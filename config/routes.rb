@@ -6,6 +6,7 @@ namespace :api, defaults: {format: :json} do
   get '/users/:id/portfolio', to: 'users#portfolio'
   resources :news, only: [:index]
   resource :session, only: [:create, :destroy]
+  resources :deposit, only: [:create, :destroy]
   resources :stocks, only: [:index]
     get '/stocks/:ticker', to: 'stocks#show'
   resources :transactions, except: [:new, :edit]
