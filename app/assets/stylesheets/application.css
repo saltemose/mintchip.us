@@ -1123,8 +1123,8 @@ h4.search-list-title {
 .main-body-2 {
     position: relative;
     padding-top: 80px;
-    display: block;
     width: 1200px;
+    display: block;
     margin: 0 auto;
 }
 
@@ -1308,17 +1308,14 @@ a.news-list-item:hover {
 
 .stock-card-overall {
     position: relative;
-    margin: 0 auto;
     width: 100%;
-    
 }
 
 .stock-card {
     position: relative;
-    margin: 0 auto;
-    margin-right: 40px;
-    margin-top: 40px;
     text-align: left;
+    margin: 0 auto;
+    margin-top: 40px;
 }
 
 .stock-card-details {
@@ -1422,11 +1419,6 @@ a.read-more:hover {
 
 a.read-less:hover {
     cursor: pointer;
-}
-
-.stock-card {
-    position: relative;
-    left: 20px;
 }
 
 .stocks-about {

@@ -177,6 +177,7 @@ render() {
                 </div>
                 </div>
                 </div>
+                
             <div>
                 {   
                     Object.keys(stock).map((key, i) => {
