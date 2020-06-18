@@ -678,7 +678,7 @@ a.footer-link {
 
 .sidebar {
     position: absolute;
-    top: 90px;
+    top: 0px;
     margin-left: 800px;
     margin-right: 550px;
     width: 285px;
@@ -692,7 +692,7 @@ a.footer-link {
 
 .stock-card-sidebar {
     position: absolute;
-    top: 90px;
+    top: 0px;
     margin-left: 800px;
     margin-right: 550px;
     width: 300px;
@@ -736,7 +736,7 @@ input {
     position: absolute;
     top: 15px;
     width: 50%;
-    margin-right: 40px;
+    margin-right: 10px;
     max-width: 500px;
     padding-left: 10px;
     border: 1px solid #ededed;
@@ -1010,6 +1010,7 @@ a.three-dots {
     z-index: inherit;
     vertical-align: middle;
     padding-right: 80px;
+    margin-right: 10px;
 }
 
 a.nav-link {
@@ -1116,7 +1117,7 @@ h4.search-list-title {
 
 .main-body {
     position: relative;
-    margin: 0 auto;
+    margin: 0;
     text-align: left;
 }
 
@@ -2214,7 +2215,7 @@ a.welcome-login-btn-3 {
     background-color: white;
     z-index: 5000;
     vertical-align: middle;
-    width: 100%;
+
 }
 
 .navbar-header {

@@ -127,7 +127,7 @@ render() {
 
         const display = (stock) ? (
             <div className="stock-card-overall">
-            <div className="stock-card">
+            <div className="cash-page">
                 <div className="navbar-stock-card">
                 <div className="navbar-header">
                 <a className="nav-link-logo" href="/"><img className="logo-image" src={window.RHLogo}></img></a>
@@ -177,7 +177,7 @@ render() {
                 </div>
                 </div>
                 </div>
-                
+                <div className="cash-page-main">
             <div>
                 {   
                     Object.keys(stock).map((key, i) => {
@@ -407,6 +407,7 @@ render() {
             </form>
             </div>
             
+            </div>
             </div>
             </div>) : (
                 <div className='stock-loading'>

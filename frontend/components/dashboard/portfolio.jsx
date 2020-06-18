@@ -67,7 +67,7 @@ class Portfolio extends React.Component {
       </div>
     )   
         return (
-            <div className="main-body">{display}</div>
+            <div className="stock-card-overall">{display}</div>
             
         )
     }

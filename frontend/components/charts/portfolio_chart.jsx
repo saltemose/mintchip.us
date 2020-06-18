@@ -171,7 +171,7 @@ class PortfolioChart extends React.Component {
 
 
         return (
-            <div className="main-body-2">
+            <div className="cash-page">
                 
                 <div className="navbar-stock-card">
                 <div className="navbar-header">
@@ -223,7 +223,8 @@ class PortfolioChart extends React.Component {
                 </div>
                 </div>
 
-
+            <div className="cash-page-main">
+            <div className="cash-page-left">
                 <div className="porfolio-container">
                     <div className="balance">
                     ${this.props.balance}
@@ -305,10 +306,14 @@ class PortfolioChart extends React.Component {
           <div className="stock-news-container-main">
           <NewsContainer/>
           </div>
+          </div>
+          
+          </div>
           <div className="sidebar">
         <StockSidebar currentUser = {currentUser} />
         </div>
           </div>
+          
           </div>
         )}
     }
