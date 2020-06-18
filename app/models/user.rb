@@ -114,7 +114,7 @@ class User < ApplicationRecord
                 .map { |stock| {symbol: stock[0], shares: stock[1]} }
                 .sort_by { |stock| stock[:symbol] }
   
-      url = "https://sandbox.iexapis.com/stable/stock/market/batch?types=quote,chart&range=1d&token=#{ENV["iex_api_key"]}&symbols="
+      url = "https://cloud.iexapis.com/stable/stock/market/batch?types=quote,chart&range=1d&token=#{ENV["iex_api_key"]}&symbols="
       stocks.each { |stock| url += "#{stock[:symbol]},"}
       response = JSON.parse(open(url).read)
   
@@ -176,7 +176,7 @@ class User < ApplicationRecord
     range = 5 if range > 5
     
     # Construct url and make API call
-    url = "https://sandbox.iexapis.com/stable/stock/market/batch?types=chart&token=#{ENV["iex_api_key"]}&range=#{range}y&last=5&symbols="
+    url = "https://cloud.iexapis.com/stable/stock/market/batch?types=chart&token=#{ENV["iex_api_key"]}&range=#{range}y&last=5&symbols="
     unique_stocks.each { |stock| url += "#{stock.ticker}, " }
     response = JSON.parse(open(url).read)
 
@@ -259,7 +259,7 @@ class User < ApplicationRecord
     unique_stocks.map! { |transaction| transaction.stock }
 
     # Dynamically generate API url based on stocks owned by user and make batch request to IEX
-    url="https://sandbox.iexapis.com/stable/stock/market/batch?types=chart&range=1d&last=5&token=#{ENV["iex_api_key"]}&symbols="
+    url="https://cloud.iexapis.com/stable/stock/market/batch?types=chart&range=1d&last=5&token=#{ENV["iex_api_key"]}&symbols="
     unique_stocks.each { |stock| url += "#{stock.ticker}, " }
     response = JSON.parse(open(url).read)
 
