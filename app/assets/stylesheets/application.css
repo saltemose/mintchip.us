@@ -1009,7 +1009,7 @@ a.three-dots {
     display: inline-flex;
     z-index: inherit;
     vertical-align: middle;
-    margin-right: 20px;
+    padding-right: 80px;
 }
 
 a.nav-link {
@@ -1115,17 +1115,17 @@ h4.search-list-title {
 }
 
 .main-body {
-    text-align: center;
-    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .main-body-2 {
-    text-align: left;
     position: relative;
-    padding-top: 60px;
-    display: inline-block;
+    padding-top: 80px;
+    display: block;
+    width: 1200px;
     margin: 0 auto;
-    margin-right: 450px;
 }
 
 .portfolio-container {
@@ -1307,21 +1307,22 @@ a.news-list-item:hover {
 }
 
 .stock-card-overall {
+    position: relative;
+    margin: 0 auto;
     width: 100%;
-    text-align: center;
+    
 }
 
 .stock-card {
-    text-align: left;
     position: relative;
-    padding-top: 60px;
-    display: inline-block;
     margin: 0 auto;
-    margin-right: 450px;
+    margin-right: 40px;
+    margin-top: 40px;
+    text-align: left;
 }
 
 .stock-card-details {
-    margin-top: 20px;
+    margin-top: 0px;
     padding-bottom: 0;
 }
 
@@ -2216,6 +2217,7 @@ a.welcome-login-btn-3 {
 
 .navbar-stock-card {
     position: fixed;
+    margin: 0 auto;
     top: 0;
     background-color: white;
     z-index: 5000;

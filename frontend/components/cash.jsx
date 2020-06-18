@@ -27,7 +27,7 @@ class Cash extends React.Component {
         this.state.input.includes('$') ? 
         this.setState({input: input}) : this.setState({input: '$' + input})
         this.state.input.includes('$') ?
-        this.setState({amount: parseFloat(amount.slice(1))}) : this.setState({amount: parseFloat(amount)})
+        this.setState({amount: parseFloat(amount.slice(1))}) : this.setState({amount: amount})
         this.setState({user_id: this.props.currentUser.id})
     }
 
@@ -56,7 +56,7 @@ class Cash extends React.Component {
         let change = this.state.change
 
         const display = this.props.currentUser.hasOwnProperty('balance_data') ? 
-        (     
+        (   <div className="stock-card-overall">
             <div className="cash-page">
                 <div className="navbar-stock-card">
                 <div className="navbar-header">
@@ -185,6 +185,7 @@ class Cash extends React.Component {
                 </div>
                
             </form>
+            </div>
             </div>
             </div>
             </div>
