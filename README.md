@@ -27,6 +27,7 @@ npm install
 
 To view in development mode, using bash, run:
 rails s
+
 In separate terminal, using node, run:
 npm run start
 
