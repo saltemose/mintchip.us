@@ -1,25 +1,37 @@
-# README
+#mintchip
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Mint Chip is a Robinhood Clone with real-time data and a demo cash account
+Users can use this app to build and track hypothetical trades and stock holdings
 
-Things you may want to cover:
+<p align="center">
+  <img src="./app/assets/images/mintchip1.png" width="350" title="hover text">
+  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+</p>
 
-* Ruby version
+About:
+Full-Stack web application using Ruby on Rails with User Authentication, allowing users to buy and sell stocks with demo cash
 
-* System dependencies
+Functions as a stock portfolio tracker and one-stop-location for all stock news and information
 
-* Configuration
+Ruby on Rails backend calculates portfolio balances, tracks individual stocks held, and processes stock sales
 
-* Database creation
+REST APIs fetch portfolio/account data/stock holdings from the Rails backend for users to track a demo stock portfolio, complete with Daily, Weekly, Monthly, Yearly, and 5-Year graphs; 
 
-* Database initialization
+APIs also fetch up-to-date stock information, market news and real-time price data
 
-* How to run the test suite
+Technologies Used for Production and Deployment:
+Ruby on Rails, Active Record as ORM Framework. React/Redux, IEXCloud API, NewsAPI.org, RESTful APIs, JQuery, Jbuilder & JSON objects, Javascript, JSX, HTML5, CSS, Herkoku, Git
 
-* Services (job queues, cache servers, search engines, etc.)
+After cloning, please follow these steps to get the app up and running:
 
-* Deployment instructions
+In your terminal:
+bundle exec rails db:setup
+bundle exec rails db:seed
+bundle install
+npm install
 
-* ...
-# mint_chip
+To view in development mode, using bash, run:
+rails s
+In separate terminal, using node, run:
+npm run start
+
