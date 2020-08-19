@@ -24,7 +24,7 @@ class PortfolioChart extends React.Component {
     }
 
     componentDidMount() {
-       this.setState({active: '1D'})
+       this.setState({active: '3M'})
        
            
      
