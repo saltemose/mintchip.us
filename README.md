@@ -37,6 +37,74 @@ Users can use this app to build and track hypothetical trades and stock holdings
 - CSS
 - Herkoku, Git
 
+**Coding Highlights**
+
+@transactions model records and saves each purchase and sale of stocks, including price, quantity, and total cost or gain.
+
+This is used with the below code to calculate total stock value of the portfolio, and in turn, total portfolio value
+
+For real-time, accurate date, stock price data is retreived from the IEXCloud API
+
+``` ruby
+def stocks_owned
+      stocks = Hash.new(0)
+      return [] if transactions.empty?
+      transactions_with_stocks = transactions.includes(:stock)
+  
+      transactions_with_stocks.each do |transaction|
+        curr_stock = transaction.stock
+        if transaction.order_type == 'buy'
+          stocks[curr_stock.ticker] += transaction.num_shares
+        else
+          stocks[curr_stock.ticker] -= transaction.num_shares
+        end
+      end
+  
+      stocks.reject { |_, shares| shares.zero? }
+    end
+
+    def calculate_stocks
+      return [] if stocks_owned.empty?
+  
+      stocks = stocks_owned
+                .map { |stock| {symbol: stock[0], shares: stock[1]} }
+                .sort_by { |stock| stock[:symbol] }
+  
+      url = "https://cloud.iexapis.com/stable/stock/market/batch?types=quote,chart&range=1d&token=#{ENV["iex_api_key"]}&symbols="
+      stocks.each { |stock| url += "#{stock[:symbol]},"}
+      response = JSON.parse(open(url).read)
+  
+      #Credit to user245031 and lolmaus - Andrey Mikhaylov on Stack Overflow for the code to make API call in Ruby
+      # response = JSON.parse(open(url).read)
+      stocks.each_with_index do |stock, idx|
+        price = response[stock[:symbol]]['quote']['latestPrice'].to_f.round(2).to_s
+        if !price.include?('.')
+          price += '.00'
+        elsif price.split('.')[1].length == 1
+          price += '0'
+        end
+        stock[:price] = price
+        stock[:intradayData] = response[stock[:symbol]]['chart']
+        stock[:openPrice] = stock[:intradayData][0]['open']
+      end
+  
+      stocks
+    end
+  
+    
+  def calculate_balance
+    stocks = calculate_stocks
+    balance = calculate_buying_power
+    stocks.each do |stock|
+      balance += (stock[:price].to_f * stock[:shares])
+    end
+    
+   sprintf('%.2f', balance.round(2))
+  end
+```
+
+Portfolio "Snapshots" are taken once daily, and this allows historical portolio data to be charted and accounted for.
+
 
 **TO VIEW APP ON YOUR LOCALHOST**
 
