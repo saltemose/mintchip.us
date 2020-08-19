@@ -2,7 +2,7 @@
 
 [www.mintchip.us](https://www.mintchip.us)
 
-![picture][30%](./app/assets/images/mintchip1.png)
+![picture][width=300](./app/assets/images/mintchip1.png)
 ![picture](./app/assets/images/mintchip2.png)
 ![picture](./app/assets/images/mintchip3.png)
 ![picture](./app/assets/images/mintchip4.png)
