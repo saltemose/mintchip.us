@@ -1,4 +1,5 @@
 # mintchip
+#### Mint Chip is a Robinhood Clone with real-time data and a demo cash account
 
 [www.mintchip.us](https://www.mintchip.us)
 
@@ -7,17 +8,17 @@
 ![picture](./app/assets/images/mintchip3.png)
 ![picture](./app/assets/images/mintchip4.png)
 
-#### Mint Chip is a Robinhood Clone with real-time data and a demo cash account
+
 Users can use this app to build and track hypothetical trades and stock holdings
 
 **About**
-- Full-Stack web application using Ruby on Rails with User Authentication, allowing users to buy and sell stocks with demo cash
+- **Full-Stack** web application using **Ruby on Rails** with **User Authentication**, allowing users to buy and sell stocks with demo cash
 
 - Functions as a stock portfolio tracker and one-stop-location for all stock news and information
 
 - Ruby on Rails backend calculates portfolio balances, tracks individual stocks held, and processes stock sales
 
-- REST APIs fetch portfolio/account data/stock holdings from the Rails backend for users to track a demo stock portfolio, complete with Daily, Weekly, Monthly, Yearly, and 5-Year graphs; 
+- **REST APIs** fetch portfolio/account data/stock holdings from the Rails backend for users to track a demo stock portfolio, complete with Daily, Weekly, Monthly, Yearly, and 5-Year graphs; 
 
 - APIs also fetch up-to-date stock information, market news and real-time price data
 
