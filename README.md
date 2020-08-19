@@ -37,9 +37,11 @@ Users can use this app to build and track hypothetical trades and stock holdings
 - CSS
 - Herkoku, Git
 
-**Coding Highlights**
+## Coding Highlights 
 
-@transactions model records and saves each purchase and sale of stocks, including price, quantity, and total cost or gain.
+### Ruby on Rails Backend
+
+**@transactions** model records and saves each purchase and sale of stocks, including price, quantity, and total cost or gain.
 
 This is used with the below code to calculate total stock value of the portfolio, and in turn, total portfolio value
 
@@ -105,6 +107,44 @@ def stocks_owned
 
 Portfolio "Snapshots" are taken once daily, and this allows historical portolio data to be charted and accounted for.
 
+### Frontend
+
+Depending on the state (whether '1D', '1W', '1M', '3M', '1Y', or '5Y' is selected), the frontend chart component collects the corresponding data (calculated in the backend) and feeds it to the LineChart:
+
+```
+     if (this.state.active === '3M' && currentUser && currentUser.hasOwnProperty('balance_data')) {
+                    let balanceData
+                    balanceData = currentUser.balance_data
+                    
+                    for (let i = balanceData.length-67; i < balanceData.length - 1; i++){
+                       
+                        main.push({
+                            time: `${balanceData[i].time}`,
+                            price: `${balanceData[i].balance}`}) 
+                        prices.push(`${balanceData[i].balance}`)
+                        
+                    
+                    }
+                marginRight = 30
+                today = "Past Quarter" }
+
+```
+
+```
+<LineChart width={700} height={220} data={main} margin={{ top: 5, right: 30, left: 0 bottom: 10 }}>
+    <YAxis
+    hide={true}
+    domain={[min, max]}
+    />
+    <ReferenceLine y={previousClose} stroke="gray" strokeWidth={1} strokeDasharray="1.5 6"/>
+    <Line type="linear" dataKey="price" dot={false} stroke={change > 0 ? "rgba(0,200,5,1)" : "rgba(255,80,0,1)"} strokeWidth={2}/>
+</LineChart>
+```
+**Other Features**
+
+Users can search for stocks in the search bar.  Stock names and tickers are seeded into the database from the NYSE and Nasdaq.  API calls use this information to get the corresponding data for each stock when selected.
+
+Colors will be green when the time period selected (per state) is positive (so the portfolio change or stock change for time period selected is positive) or red for negative.  This makes for easy and clear UX.
 
 **TO VIEW APP ON YOUR LOCALHOST**
 
