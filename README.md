@@ -54,6 +54,7 @@ In separate terminal, using node, run:
 npm run start
 
 **To Be Completed**
+
 Fix daily data for portfolio chart (currently not rendering)
 
 Add Watchlist Feature (to watch selected stocks in sidebar)
