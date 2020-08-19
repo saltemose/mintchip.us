@@ -280,7 +280,7 @@ class User < ApplicationRecord
         data.push({ time: label, balance: balance })
       end
 
-      return data
+      return data if data
     end
 
 
