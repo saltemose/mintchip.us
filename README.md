@@ -17,22 +17,23 @@ Users can use this app to build and track hypothetical trades and stock holdings
 - APIs also fetch up-to-date stock information, market news and real-time price data
 
 **Technologies Used for Production and Deployment**
-Ruby on Rails 
-Active Record as ORM Framework
-React/Redux
-IEXCloud API
-NewsAPI.org
-RESTful APIs
-JQuery
-Jbuilder & JSON objects
-Javascript
-JSX
-HTML5
-CSS
-Herkoku, Git
+- Ruby on Rails 
+- Active Record as ORM Framework
+- React/Redux
+- IEXCloud API
+- NewsAPI.org
+- RESTful APIs
+- JQuery
+- Jbuilder & JSON objects
+- Javascript
+- JSX
+- HTML5
+- CSS
+- Herkoku, Git
 
 
 **TO VIEW APP ON YOUR LOCALHOST**
+
 After cloning, please follow these steps to get the app up and running:
 
 In your terminal:
