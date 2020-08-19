@@ -2,10 +2,10 @@
 
 [www.mintchip.us](https://www.mintchip.us)
 
-![picture](./app/assets/images/mintchip1.png)
-![picture](./app/assets/images/mintchip2.png)
-![picture](./app/assets/images/mintchip3.png)
-![picture](./app/assets/images/mintchip4.png)
+![picture](./app/assets/images/mintchip1.png | width=200)
+![picture](./app/assets/images/mintchip2.png | width=200)
+![picture](./app/assets/images/mintchip3.png | width=200)
+![picture](./app/assets/images/mintchip4.png | width=200)
 
 #### Mint Chip is a Robinhood Clone with real-time data and a demo cash account
 Users can use this app to build and track hypothetical trades and stock holdings
