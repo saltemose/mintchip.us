@@ -111,7 +111,7 @@ Portfolio "Snapshots" are taken once daily, and this allows historical portolio 
 
 Depending on the state (whether '1D', '1W', '1M', '3M', '1Y', or '5Y' is selected), the frontend chart component collects the corresponding data (calculated in the backend) and feeds it to the LineChart:
 
-```
+```javascript
      if (this.state.active === '3M' && currentUser && currentUser.hasOwnProperty('balance_data')) {
                     let balanceData
                     balanceData = currentUser.balance_data
@@ -130,7 +130,7 @@ Depending on the state (whether '1D', '1W', '1M', '3M', '1Y', or '5Y' is selecte
 
 ```
 
-```
+```javascript
 <LineChart width={700} height={220} data={main} margin={{ top: 5, right: 30, left: 0 bottom: 10 }}>
     <YAxis
     hide={true}
@@ -143,6 +143,10 @@ Depending on the state (whether '1D', '1W', '1M', '3M', '1Y', or '5Y' is selecte
 **Other Features**
 
 Users can search for stocks in the search bar.  Stock names and tickers are seeded into the database from the NYSE and Nasdaq.  API calls use this information to get the corresponding data for each stock when selected.
+
+Users can add deposits on the "Cash" page.  The amount of buying power is updated accordingly.
+
+Each individual stock page has a sidebar that will allow a user to purchase their chosen quantity of that stock, and if the user already owns some of that stock, it will allow the option to sell a chosen quantity as well.
 
 Colors will be green when the time period selected (per state) is positive (so the portfolio change or stock change for time period selected is positive) or red for negative.  This makes for easy and clear UX.
 
