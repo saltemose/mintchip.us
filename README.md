@@ -3,11 +3,6 @@
 Mint Chip is a Robinhood Clone with real-time data and a demo cash account
 Users can use this app to build and track hypothetical trades and stock holdings
 
-<p align="center">
-  <img src="./app/assets/images/mintchip1.png" width="350" title="hover text">
-  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
-</p>
-
 About:
 Full-Stack web application using Ruby on Rails with User Authentication, allowing users to buy and sell stocks with demo cash
 
