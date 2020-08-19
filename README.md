@@ -53,3 +53,8 @@ rails s
 In separate terminal, using node, run:
 npm run start
 
+**To Be Completed**
+Fix daily data for portfolio chart (currently not rendering)
+Add Watchlist Feature (to watch selected stocks in sidebar)
+Create Free Stocks Page, and Message Section for clients to communicate with MintChip
+Create collections page, where stocks can be viewed based upon the collection to which they belong
