@@ -22,7 +22,7 @@ class News extends React.Component {
             return article; 
         })
     return (
-    <ul className="main-news-container">
+    <div className="main-news-container">
     <div className="news-title">News</div>
                 {
                     news.map((article) => {
@@ -48,7 +48,7 @@ class News extends React.Component {
                         );
                     })
                 }
-        </ul>
+        </div>
     )};
 
     render() {

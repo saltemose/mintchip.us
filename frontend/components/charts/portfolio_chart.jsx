@@ -303,17 +303,21 @@ class PortfolioChart extends React.Component {
                 <a className={change > 0 ? "collection"  : "collection-neg"} href="">Entertainment</a>
                 </div>
           <br/><br/>
-          <div className="stock-news-container-main">
+
+         <div className="stock-news-container-main">
           <NewsContainer/>
           </div>
           </div>
           
           </div>
+      
+
           <div className="sidebar">
         <StockSidebar currentUser = {currentUser} />
         </div>
           </div>
-          
+
+         
           </div>
         )}
     }

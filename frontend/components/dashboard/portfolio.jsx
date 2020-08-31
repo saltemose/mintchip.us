@@ -49,8 +49,11 @@ class Portfolio extends React.Component {
         stocks = currentUser.stocks
         
         const display = currentUser.hasOwnProperty('balance_data') ? 
-        (     
+        (    
+         
         <PortfolioChart parentCallback={this.getChange} balance={balance} currentUser={this.props.currentUser} logout={this.props.logout}/>
+ 
+    
                     
         ) : (<div className='stock-loading'>
      
