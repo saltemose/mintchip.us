@@ -2341,7 +2341,7 @@ input.login-input { width: 90% }
 }
 
 .cash-page-main {
-    width: 100%;
+    width: 95%;
     overflow: hidden;
 }
 
@@ -2378,14 +2378,19 @@ input.login-input { width: 90% }
     top: 0px;
     margin-left: 0;
     margin-right: 0;
-    width: 100%;
+    width: 90%;
     padding-bottom: 15px;
+    border: 1px solid rgba(146, 146, 146, 0.247);
     box-shadow: none;
     overflow: scroll;
     text-decoration: none;
     scrollbar-width: 0px;
     scrollbar-color: transparent;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
 
 
 a.forgot-link {
@@ -2495,6 +2500,7 @@ input {
     padding-left: 10px;
     padding-right: 10px;
     vertical-align: middle;
+    border-bottom: 1px solid rgba(145, 145, 145, 0.178);
 
 }
 
@@ -3056,24 +3062,25 @@ ul.news-list-item-link {
 }
 
 .news-image img{
-    display: none;
+    display: block;
     padding-left: 10px;
     width: 80%;
     border-radius: 20px;
+    
 }
 
 
 
 .left-news-item {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 70%;
     vertical-align: middle;
 }
 
 .right-news-item {
-    display: none;
+    display: inline-block;
     vertical-align: middle;
-    width: 0;
+    width: 30%;
     text-align: right;
 }
 
@@ -3136,7 +3143,7 @@ ul.news-list-item-link {
 
 .stocks-about-container {
     width: 100%;
-    height: 2em;
+    height: 1.6em;
     overflow: hidden;
     padding-bottom: 20px;
 }
@@ -3164,7 +3171,7 @@ ul.news-list-item-link {
 
 a.read-more {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 10pt;
+    font-size: 8pt;
     font-weight: 600;
     position: relative;
     padding-top: 8px;
@@ -3173,7 +3180,7 @@ a.read-more {
 
 a.read-less {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 10pt;
+    font-size: 8pt;
     font-weight: 600;
     padding: 5px;
     padding-left: 10px;
@@ -3200,7 +3207,7 @@ a.read-less:hover {
     padding-left: 0px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
-    font-size: 12pt;
+    font-size: 10pt;
     line-height: 1.4em;
     overflow: hidden;
     color: black;

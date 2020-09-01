@@ -18,7 +18,7 @@ class Api::UsersController < ApplicationController
 
     def portfolio
         @user = User.find(params[:id])
-      end
+    end
 
     private
 

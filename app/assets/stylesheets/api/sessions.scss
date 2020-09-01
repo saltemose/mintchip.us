@@ -107,3 +107,113 @@ h1.cash-page-title {
     width: 50%;
     text-align: right;
 }
+
+@media (max-width: 800px) {
+
+    .cash-page {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 100px;
+        text-align: left;
+    }
+    
+    .cash-page-main {
+        margin: 0 auto;
+        width: 1100px;
+    }
+    
+    .cash-page-left {
+        text-align: left;
+    }
+    
+    .balance-2 {
+        font-size: 24pt;
+        font-weight: 520;
+        margin-top: -.4em;
+        padding-bottom: 25px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    h1.cash-page-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 550;
+    }
+    
+    .cash-page-container {
+        display: inline-block;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 90%;
+        border: 1px solid #333333;
+        background-color: transparent;
+        border-radius: 7px;
+        height: auto;
+        vertical-align: middle;
+        margin-right: 20px;
+        margin: 10px auto;
+    }
+    
+    .cpc-left svg {
+        margin-top: 25px;
+    }
+    
+    .cpc-left {
+        display: inline-block;
+        width: 30%;
+        height: 220px;
+    }
+    
+    .cpc-right {
+        display: inline-block;
+        width: 70%;
+        margin-top: 25px;
+        
+    }
+    
+    .cpc-title {
+        font-weight: 500;
+        font-size: 12pt;
+        padding: 12px;
+        padding-bottom: 0;
+        margin-left: 10px;
+    }
+    
+    .cash-bp {
+        font-weight: 600;
+        font-size: 14pt;
+        padding: 12px;
+        padding-top: 5px;
+        margin-left: 10px;
+    }
+    
+    .cash-detail {
+        padding-top: 25px;
+        font-weight: 400;
+        font-size: 11pt;
+        color: #5e5e5e;
+        padding: 12px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin: 0 auto;
+    }
+    
+    .stock-sidebar-button-unhighlighted {
+        width: 100%;
+        outline: none;
+        border: none;
+        height: 55px;
+        background-color: rgb(124, 124, 124);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 10pt;
+        font-weight: 500;
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        border: 1px solid white;
+    }
+    
+    .sidebar-input-a {
+        display: inline-block;
+        width: 50%;
+        text-align: right;
+    }
+}

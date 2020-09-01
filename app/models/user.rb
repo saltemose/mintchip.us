@@ -270,7 +270,18 @@ class User < ApplicationRecord
     transaction_index = sorted_transactions.length
 
     # Return nothing if it is a holiday and there is no data this day
+    if response.all? { |k, _| response[k]['chart'].empty? }
+      times.each do |time|
+        hour = time.split(':')[0].to_i
+        minute_string = time.split(':')[1]
+        label = hour > 12 ? "#{hour - 12}:#{minute_string} PM ET" : "#{time} AM ET"
+        label = "#{time} PM ET" if hour == 12
+        
+        data.push({ time: label, balance: balance })
+      end
 
+      return data
+    end
 
 
     ## Iterate through all transactions previous to the current day to get closing balance of previous day
