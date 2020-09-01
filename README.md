@@ -3,11 +3,15 @@
 
 [www.mintchip.us](https://www.mintchip.us)
 
+### Desktop Views
 ![picture](./app/assets/images/mintchip1.png)
 ![picture](./app/assets/images/mintchip2.png)
 ![picture](./app/assets/images/mintchip3.png)
 ![picture](./app/assets/images/mintchip4.png)
+
+## Mobile Views
 ![picture](./app/assets/images/mintchip_mobileviews.jpg)
+
 
 Users can use this app to build and track hypothetical trades and stock holdings
 
